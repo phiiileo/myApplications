@@ -1,41 +1,110 @@
-header{
+main {
+    min-height: 65vh;
+}
+header {
     text-align: center;
     color: darkcyan;
     padding: 30px 7%;
 }
+
+header p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header a {
+    color: darkred;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: darkcyan;
+}
+
 .row1 {
     text-align: center;
     padding: 10px 0;
 }
-.row1 button {
+
+button {
     background-color: darkcyan;
     border: 1px solid darkcyan;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    padding: 10px 30px;
+    padding: 7px 30px;
+    border-radius: 5px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     color: darkcyan !important;
     background-color: transparent !important;
 }
-.row2{
-    min-height: 60vh;    min-width: 300px;
+
+.row2 {
+    min-height: 60vh;
+    min-width: 300px;
     max-width: 700px;
     margin: 0 auto;
+    display: none;
+}
+.show {
+    display: block ;
 }
 
-.question{
-   color: red;
+.question {
+    padding: 0px 10px;
 }
 .question h3 {
+    color: darkred;
     margin: 20px 0;
+    font-size: 25px;
 }
+
 .question p {
-    padding-left: 30px;
+    padding: 5px 30px;
+    font-size: 20px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.question p:nth-child(odd) {
+    background-color: rgba(59, 65, 65, 0.247);
+}
+.question p:nth-child(even) {
+    background-color: rgba(59, 65, 65, 0.089);
+}
+.question p:active{
+    background-color: rgba(0, 139, 139, 0.301);
+}
+
+.userAnswer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userAnswer input:disabled {
+    height: 55px;
+    width: 50px;
+    padding-left: 15px;
+    font-size: 25px;
+    border: 1px solid darkcyan;
+    background-color: transparent;
+}
+
+.userAnswer button {
+    border-radius: 0px 5px 5px 0;
 }
 
 .answer {
-    color: ;
+    text-align: center;
+    color: darkcyan;
 }
 
+.control {
+    text-align: center;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}

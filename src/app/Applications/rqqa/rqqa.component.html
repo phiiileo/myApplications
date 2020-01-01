@@ -1,20 +1,35 @@
 <header>
     <h1>{{Title}}</h1>
+    <p><a routerLink="/rqqa">RQQA</a> | <a routerLink="/about">About</a></p>
+
 </header>
 <main>
     <section class="row1">
-        <button (click)="start()">START</button>
+        <button (click)="start()">{{state}}</button>
     </section>
-    <section class="row2">
+
+    <section class="row2" [class.show]="show">
         <section class="question">
-           <h3>{{question}}</h3> 
-            <p> A. {{optionA}}</p>
-            <p> B. {{optionB}}</p>
-            <p> C. {{optionC}}</p>
+            <h3>Question {{index + 1}}: {{question}}</h3>
+            <p (click)="pickAnswer('A')"> A. {{optionA}}</p>
+            <p (click)="pickAnswer('B')"> B. {{optionB}}</p>
+            <p (click)="pickAnswer('C')"> C. {{optionC}}</p>
         </section>
+
+        <section class="userAnswer">
+            <span><input type="text" #userAnswer [value]="selectedAnswer" disabled></span>
+            <button (click)="submitAnswer()">Submit</button>
+        </section>
+
         <section class="answer">
-            <h1>{{AnswerStatus}}</h1>
-            <h3> Answer: {{answer}}</h3>
+            <h1>{{AnswerStatus}}</h1> <br>
+            <h3><button (click)="checkAnswer()">Check Answer</button> {{answer}}</h3>
         </section>
+
+        <section class="control">
+            <button id="prev" (click)="changeQuestion($event)">Prev</button>
+            <button id="next" (click)="changeQuestion($event)">Next</button>
+        </section>
+
     </section>
 </main>

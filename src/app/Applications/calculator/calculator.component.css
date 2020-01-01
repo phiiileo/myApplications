@@ -6,6 +6,18 @@ header h1 {
     text-align: center;
 }
 
+header p {
+    text-align: center;
+    margin: 20px 0;
+}
+header a {
+    color: darkred;
+    text-decoration: none;
+}
+header a:hover{
+    color: darkcyan;
+    
+}
 main{
     min-height: 72vh;
 }
