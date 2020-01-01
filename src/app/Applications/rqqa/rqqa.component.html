@@ -11,6 +11,7 @@
     <section class="row2" [class.show]="show">
         <section class="question">
             <h3>Question {{index + 1}}: {{question}}</h3>
+            <i>Instruction: Click each options to pick your answer</i>
             <p (click)="pickAnswer('A')"> A. {{optionA}}</p>
             <p (click)="pickAnswer('B')"> B. {{optionB}}</p>
             <p (click)="pickAnswer('C')"> C. {{optionC}}</p>
@@ -18,11 +19,11 @@
 
         <section class="userAnswer">
             <span><input type="text" #userAnswer [value]="selectedAnswer" disabled></span>
-            <button (click)="submitAnswer()">Submit</button>
+            <button (click)="submitAnswer(answerstatus)">Submit</button>
         </section>
 
         <section class="answer">
-            <h1>{{AnswerStatus}}</h1> <br>
+            <h1 #answerstatus>{{AnswerStatus}}</h1> <br><br>
             <h3><button (click)="checkAnswer()">Check Answer</button> {{answer}}</h3>
         </section>
 

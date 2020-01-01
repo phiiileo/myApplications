@@ -68,10 +68,10 @@ button:hover {
     cursor: pointer;
 }
 .question p:nth-child(odd) {
-    background-color: rgba(59, 65, 65, 0.247);
+    background-color: rgba(59, 65, 65, 0.13);
 }
 .question p:nth-child(even) {
-    background-color: rgba(59, 65, 65, 0.089);
+    background-color: rgba(82, 85, 85, 0.089);
 }
 .question p:active{
     background-color: rgba(0, 139, 139, 0.301);

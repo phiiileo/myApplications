@@ -17,6 +17,7 @@ export class RqqaComponent implements OnInit {
   id; question; optionA; optionB; optionC; answer; currentQ;
   selectedAnswer = "";
   index = 0;
+  timeSpent = ""
 
   constructor(private rqqa: QAService) {
   }
@@ -27,10 +28,19 @@ export class RqqaComponent implements OnInit {
       .subscribe(data => {
         this.Quiz = data;
       });
+
   }
 
- //Start the Quiz
-  start() {  
+  //startTime  
+  startTime() {
+    //  let newDate = new Date();
+    //  let minute = newDate.getMinutes()
+    //  let seconds = newDate.getSeconds();
+    //  this.timeSpent = minute + ":" + seconds;
+  }
+
+  //Start the Quiz
+  start() {
     (this.state === "START") ? this.index = 0 : this.index = 0;
 
     this.currentQ = this.Quiz[this.index];
@@ -41,7 +51,9 @@ export class RqqaComponent implements OnInit {
     this.optionC = this.currentQ.question.optC;
     // this.answer = this.currentQ.answer;
     this.show = true;
-    this.state = "RESTART"
+    this.state = "RESTART";
+
+    this.startTime()
 
   }
 
@@ -51,14 +63,17 @@ export class RqqaComponent implements OnInit {
   }
 
   //submit answer
-  submitAnswer() {
+  submitAnswer(stat) {
     if (this.currentQ.answer == this.selectedAnswer) {
-      this.AnswerStatus = "Correct"
+      this.AnswerStatus = "Correct";
+      stat.style.color = "darkcyan"
+
     } else {
       this.AnswerStatus = "Wrong";
+      stat.style.color = "red"
+
     }
     this.answer = ""
-
   }
 
   //show the correct answer
@@ -91,7 +106,7 @@ export class RqqaComponent implements OnInit {
       this.optionB = this.currentQ.question.optB;
       this.optionC = this.currentQ.question.optC;
     }
-    
+
     //reset the following value when either of the buttons is clicked
     this.AnswerStatus = "";
     this.answer = "";
