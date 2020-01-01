@@ -1,0 +1,14 @@
+main {
+    height: 85vh;
+    text-align: center;
+    color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    display: block;
+    margin-top: -150px;
+}
