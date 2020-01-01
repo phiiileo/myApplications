@@ -31,6 +31,7 @@ export class RqqaComponent implements OnInit {
 
   }
 
+
   //startTime  
   startTime() {
     //  let newDate = new Date();
