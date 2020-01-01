@@ -1,0 +1,27 @@
+<section class="container">
+    <header>
+        <h1>My {{Title}}</h1>
+        <p><a routerLink="/todoapp">TodoApp</a> |
+            <a routerLink="/about">About</a>
+        </p>
+    </header>
+    <main>
+        <section class="row1">
+            <form action="">
+                <input type="text" name="newtodo" [(ngModel)]="newTodo">
+                <button (click)="addTodo()">Add Todo</button>
+            </form>
+        </section>
+
+        <section class="row2">
+            <h3>Todo List <span class="badge">{{Todos.length}}</span> </h3>
+            <ul>
+                <li [id]="todo.id" [class.completed]="todo.completed" #mylist *ngFor="let todo of Todos">
+                    <input (change)="toggleComplete(mylist)" type="checkbox" [checked]="todo.completed" name="todo" id="">
+                    <p>{{todo.title}}</p>
+                    <span [id]="todo.id" (click)="deleteTodo($event)">&times;</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</section>

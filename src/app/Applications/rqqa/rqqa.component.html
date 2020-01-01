@@ -1,0 +1,20 @@
+<header>
+    <h1>{{Title}}</h1>
+</header>
+<main>
+    <section class="row1">
+        <button (click)="start()">START</button>
+    </section>
+    <section class="row2">
+        <section class="question">
+           <h3>{{question}}</h3> 
+            <p> A. {{optionA}}</p>
+            <p> B. {{optionB}}</p>
+            <p> C. {{optionC}}</p>
+        </section>
+        <section class="answer">
+            <h1>{{AnswerStatus}}</h1>
+            <h3> Answer: {{answer}}</h3>
+        </section>
+    </section>
+</main>

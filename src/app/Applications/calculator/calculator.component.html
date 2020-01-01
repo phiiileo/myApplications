@@ -1,0 +1,17 @@
+<header>
+    <h1>{{Title}}</h1>
+</header>
+<main>
+   <p class="errorMessage">{{errorMessage}}</p> 
+    <section class="calculator">
+        <aside class="screen">
+            <input type="text" [value]="inputValue" disabled>
+            <input type="text" [value]="result" disabled>
+        </aside>
+        <aside class="buttons">
+            <input class="rb" type="button" [value]="rb" *ngFor="let rb of resetbtn" (click)="clear($event)">
+            <input class="btn" type="button" [value]="button" *ngFor="let button of buttons" (click)="getValue($event)">
+            <input class="sbtn" type="button" [value]="sbtn" *ngFor="let sbtn of specialBtn" (click)="evaluate($event)">
+        </aside>
+    </section>
+</main>

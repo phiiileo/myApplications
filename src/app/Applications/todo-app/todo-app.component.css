@@ -1,0 +1,128 @@
+.container {
+    padding: 20px 0;
+}
+
+header {
+    text-align: center;
+    padding: 0 7%;
+}
+
+header h1 {
+    margin: 20px 0 10px 0;
+    color: darkcyan;
+}
+
+header a {
+    color: darkred;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: darkcyan;
+}
+
+.row1 {
+    padding: 0 7%;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.row1 input {
+    padding: 9px 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.row1 button {
+    width: 30%;
+    background-color: darkcyan;
+    border: 1px solid darkcyan;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.row2 {
+    padding: 0 7%;
+    margin: 20px 0 50px 0;
+    height: 50vh;
+    border-top: 1px solid darkcyan;
+}
+
+.row2 h3 span {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    cursor: -webkit-grab;
+}
+
+.row2 h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: darkcyan;
+    position: relative;
+}
+
+.row2 ul {
+    height: 100%;
+    overflow-y: scroll;
+    list-style: none;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid darkcyan;
+}
+
+.row2 ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to left, white 50%, darkcyan 50%);
+    background-position: right;
+    background-size: 200% 100%;
+    transition: all 1s ease-in-out;
+}
+
+.row2 ul li.completed {
+    background-position: left;
+    transition: all 1s ease-in-out;
+    color: white;
+}
+
+li.completed p {
+    text-decoration: underline;
+}
+
+.row2 ul li input {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.row2 ul li span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.row2 ul li p {
+    display: inline-block;
+    word-wrap: break-word;
+    width: 90%;
+    padding-right: 20px;
+}
