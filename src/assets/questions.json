@@ -27,6 +27,77 @@
           "optB": "It's a framework",
           "optC": "It's a Library"
         },
+        "answer": "B"
+      },
+      {
+        "id": 4,
+        "question": {
+          "Q": "_____ is a mark up language of the web",
+          "optA": "HLTM",
+          "optB": "HTLM",
+          "optC": "HTML"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 5,
+        "question": {
+          "Q": "The triplet of frontend development is",
+          "optA": "React, Angular and Vue",
+          "optB": "HTML, CSS and JavaScript",
+          "optC": "Element, Tag and Anchor"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 6,
+        "question": {
+          "Q": "What language is used for adding interractiveness to a web page",
+          "optA": "SuperScript",
+          "optB": "React",
+          "optC": "JavaScript"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 7,
+        "question": {
+          "Q": "What is the function of anchor tags in web page",
+          "optA": "It allows navigation to different pages",
+          "optB": "It is used for tagging a page",
+          "optC": "It allows specific animation usage on the element"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 8,
+        "question": {
+          "Q": "what is the function of alt on an image tag",
+          "optA": "It's a caption to the img",
+          "optB": "It's an alternative to img if the image src(link) is broken",
+          "optC": "It displays alongside the image"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 9,
+        "question": {
+          "Q": "what is the function of border-radius",
+          "optA": "It reduces the size of an element",
+          "optB": "It is used to define the size of the brder of an element",
+          "optC": "It used to define curves on the edges of an element"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 10,
+        "question": {
+          "Q": "What does 'new Date()' return",
+          "optA": "The current full date and time",
+          "optB": "It's used to set date and time",
+          "optC": "It returns just time "
+        },
         "answer": "A"
       }
+
 ]
