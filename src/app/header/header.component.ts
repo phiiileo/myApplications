@@ -12,4 +12,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  //Toggle Menu
+
+  toggleMenu(bar) {
+
+    (bar.style.display == "block") ?
+      bar.style.display = "none" :
+      bar.style.display = "block"
+  }
+
+
 }

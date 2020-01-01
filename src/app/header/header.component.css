@@ -2,6 +2,7 @@ header{
     background-color: darkcyan;
     padding: 20px 7%;
     color: white;
+    position: relative;
 }
 
 aside.brand {
@@ -23,4 +24,37 @@ aside.navbar{
 
 .navbar a:hover{
    border-bottom: 1px solid white;
+}
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 760px){
+    aside.navbar {
+        display: none;
+        background-color: darkcyan;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        padding: 10px 3%;
+    }
+    .navbar a {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+        width: 25px;
+        position: absolute;
+        right: 3%;
+        top: 30px;
+        cursor: pointer;
+    }
+    .hamburger:hover{
+        opacity: .7;
+    }
+    .hamburger .stick {
+        height: 3px;
+        margin-bottom: 3px;
+        background-color: white;
+    }
 }
