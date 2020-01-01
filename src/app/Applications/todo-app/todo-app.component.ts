@@ -15,20 +15,22 @@ export class TodoAppComponent implements OnInit {
   constructor(private _todos: TodoAppService) { }
 
   ngOnInit() {
-   this._todos.getTodos()
-   .subscribe(data => this.Todos = data)
+    this._todos.getTodos()
+      .subscribe(data => this.Todos = data)
   }
 
+  //Add new Todos
   addTodo() {
-    let rand1 = Math.floor(Math.random()* 100 + 10);
-    let rand2 = Math.floor(Math.random()* 1000 + 10);
+    let rand1 = Math.floor(Math.random() * 100 + 10);
+    let rand2 = Math.floor(Math.random() * 1000 + 10);
     let generateid = rand1 * rand2
-    let newTodoObj = { id: generateid , title: this.newTodo, completed: false }
+    let newTodoObj = { id: generateid, title: this.newTodo, completed: false }
 
     this.Todos.unshift(newTodoObj)
     this.newTodo = " "
   }
 
+  //Delete a Todo
   deleteTodo(event) {
     let updatedTodos = this.Todos.filter(value => {
       return value.id != event.target.id
@@ -36,13 +38,14 @@ export class TodoAppComponent implements OnInit {
 
     this.Todos = updatedTodos
   }
+
+  //Toggle Todo completion state
   toggleComplete(event) {
-    let updatedTodos = this.Todos.map(value => {
+    this.Todos.map(value => {
       if (event.id == value.id) {
         value.completed = !value.completed
       }
     })
 
   }
-
 }

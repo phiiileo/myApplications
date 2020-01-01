@@ -6,21 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
+  //parameters
   Title: string = "Calculator";
   inputValue = "";
   errorMessage = ""
   result = [];
+
   constructor() { }
+  //Calculator Buttons
   buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "*", "-", ".", "/", "+"];
   specialBtn = ["(", ")", "="];
-  resetbtn = ["CA", "C"]
+  resetbtn = ["CA", "C"];
+
   ngOnInit() {
   }
 
+  //Add input to the calculation field
   getValue(event) {
     let val = event.target.value;
     this.inputValue += val;
   }
+
+  //Clear calculation field and result field
   clear(event) {
     this.result = []
     this.errorMessage = " "
@@ -33,11 +40,15 @@ export class CalculatorComponent implements OnInit {
     }
   }
 
+  //Calculate the expression enterred 
   evaluate(event) {
+    //Add "+" 
     if (event.target.value !== "=") {
       let val = event.target.value;
       this.inputValue += val;
     }
+
+    //Validate the calculation field
     else {
       const myregx = /[*+-/][*+-/]/;
       const myregx2 = /[*-+/]/;
@@ -49,13 +60,12 @@ export class CalculatorComponent implements OnInit {
         let split2 = value.split(".");
         (split2.length > 2) ? test3 = true : test3 = false
       })
-      console.log(test3)
-      // console.log(x)
 
       
       if (test || test2 || test3) {
         this.errorMessage = "Enter real numbers only!"
       }
+      //Finally Evalaute the calculation field if valid
       else {
         this.result = eval(this.inputValue)
       }
