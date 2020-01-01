@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "question": {
+          "Q": "Is Angular a Javascript library, plugin or framework",
+          "optA": "It's a framework",
+          "optB": "It's a pluggin",
+          "optC": "It's a Library"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 2,
+        "question": {
+          "Q": "Is React a Javascript library, plugin or framework",
+          "optA": "It's a framework",
+          "optB": "It's a pluggin",
+          "optC": "It's a Library"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 3,
+        "question": {
+          "Q": "Is Vue a Javascript library, plugin or framework",
+          "optA": "It's a pluggin",
+          "optB": "It's a framework",
+          "optC": "It's a Library"
+        },
+        "answer": "A"
+      }
+]
