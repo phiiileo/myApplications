@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proposal</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-size: bold;
+        }
+        p{
+            text-align: center;
+        }
+        a {
+            color: green;
+            background-color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        #hayjay {
+            border: 2px solid lightgreen;
+            padding: 10px 20px;
+            background-color: white;
+            color: green;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            width: 200px;
+            margin: 50px auto;
+            display: none;
+        }
+
+        @keyframes rotate{
+            0%{
+                transform: /*rotate(45deg),*/ rotateX(80deg);
+                background-color: green;
+                color: white;
+                border: 3px solid white;
+            }
+            50%{
+                transform: rotate(180deg);
+                border: 3px solid blue;
+            }
+
+            100%{
+                transform: rotate(360deg);
+                border: 3px solid green;
+                background-color: orange;
+                color: white;
+                transition: all 3s;
+            }
+        }
+    </style>
+</head>
+<body id="body">   
+
+    <p id="hayjay"></p>
+    <h1 id="cta"></h1>
+    <p id="message"></p>
+    <i id="note"></i>
+</body>
+<script>
+let body = document.getElementById("body");
+body.style.backgroundColor = "lightgreen";
+let reply = prompt("Phileo is asking: 'What is your name?'");
+reply = reply.toLowerCase();
+
+let test1 = reply.indexOf('hayjay') >= 0 || reply.indexOf('lilian') >= 0 || reply.indexOf('ovrawah') >=0
+
+if (test1){
+    reply = reply.toUpperCase()
+   const QUESTION = reply + ", WILL YOU BE MY GIRLFRIEND?";
+    let reply2 = prompt("Phileo is asking: " + QUESTION)
+    reply2 = reply2.toLowerCase();
+    if(reply2 === "yes"){
+        alert("WOW!!! WOW!!! WOW!!!, I'm glad you are giving us this chance, " + reply + ", you won't regret it! cheers :) winks...")
+        alert("I can't be more happy you accepting my proposal...I LOVE YOU!");
+        document.querySelector("#message").innerHTML = "Message me <a href='https://wa.me/2348102562103'>here</a>";
+        document.querySelector("#cta").innerHTML = "I'm excited and waiting for your message";
+        document.querySelector("#hayjay").innerHTML = "I LOVE " + reply +"!!!";
+        document.querySelector("#hayjay").style.display = "block";
+        document.querySelector("#note").innerHTML = "I know this isn't the best, but I just wanted to do something unusual"
+        body.style.backgroundColor = "lightblue"
+
+    }
+    else{
+        alert("If you would like to reconsider, please refresh!")
+        document.querySelector("#note").innerHTML = "Hope you like the idea?"
+    }
+   //prompt(QUESTION);
+//    console.log(QUESTION)
+}
+else{
+
+    alert('You entered a name, I was not expecting...winks :)');
+    alert('Please refresh and enter the name I was expecting')
+}
+
+</script>
+</html>
+<section>
+
+    <source srcset="">
+</section>
